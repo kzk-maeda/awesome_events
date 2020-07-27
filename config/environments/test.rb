@@ -39,4 +39,8 @@ Rails.application.configure do
 
   # Raises error for missing translations.
   # config.action_view.raise_on_missing_translations = true
+
+  # Credentials
+  config.credentials.content_path = Rails.root.join('config', 'credentials', 'development.yml.enc')
+  config.credentials.key_path = Rails.root.join('config', 'credentials', 'development.key')
 end
